@@ -1,14 +1,19 @@
-%% Read in audio
 
-[originalSineSweep, ~] = audioread(originalSineSweepName);
-[measuredSineSweep, ~] = audioread(measuredSineSweepName);
-measuredSineSweep = measuredSineSweep(:, 1);
+function[IR] = getIR(originalSineSweepName, measuredSineSweepName, cutoff)
+    %% Read in audio
 
-%% Reverse original sine sweep
+    [originalSineSweep, ~] = audioread(originalSineSweepName);
+    [measuredSineSweep, ~] = audioread(measuredSineSweepName);
+    measuredSineSweep = measuredSineSweep(:, 1);
 
-reversedSineSweep = (flip(originalSineSweep));
+    %% Reverse original sine sweep
 
-%% Convolve reversed sine sweep with measured sine sweep
+    reversedSineSweep = (flip(originalSineSweep));
 
-IR = conv(reversedSineSweep, measuredSineSweep);
-IR = IR(130000:end);
+    %% Convolve reversed sine sweep with measured sine sweep
+
+    IR = conv(reversedSineSweep, measuredSineSweep);
+    
+    %% cuttof at 130000
+    IR = IR(cutoff:end);
+end
