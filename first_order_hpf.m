@@ -9,11 +9,11 @@ fc = 250;
 
 wc = 2.*pi.*fc./Fs;
 
-alpha = 2 - cos(wc);
+alpha = 2 + cos(wc);
 
-b1 = -alpha + sqrt(alpha.^2 - 1);
+b1 = alpha - sqrt(alpha.^2 - 1);
 
-a0 = 1 + b1;
+a0 = 1 - b1;
 
 %db = 10.^(a1/20);
 
