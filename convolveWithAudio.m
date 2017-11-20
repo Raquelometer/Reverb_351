@@ -9,5 +9,6 @@ volume = max(testAudio);
 
 audioOut = conv(testAudio(:, 1), IR);
 
+
 %% Set maximum volume to what it was before convolution
 audioOut = audioOut ./ max(audioOut) .* volume;
