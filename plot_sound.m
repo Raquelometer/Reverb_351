@@ -6,7 +6,7 @@ t = linspace(0, length(y)/fs, length(y));
 
 figure(fig_num)
 plot(t,y')
-title(title)
+%title(title)
 xlabel('time (s)')
 ylable('amplitude')
 
