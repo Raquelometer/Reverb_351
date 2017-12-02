@@ -1,5 +1,6 @@
 function[y_scaled] = rescale_sound(y, dim)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 %y_max_L = max(y(:,1))
 %y_min_L = min(y(:,1))
@@ -7,6 +8,15 @@ function[y_scaled] = rescale_sound(y, dim)
 y_max_L = max(y(:,1))
 y_min_L = min(y(:,1))
 
+=======
+% test comment
+%y_max_L = max(y(:,1))
+%y_min_L = min(y(:,1))
+
+y_max_L = max(y(:,1))
+y_min_L = min(y(:,1))
+
+>>>>>>> daphna_branch
 =======
 % test comment
 %y_max_L = max(y(:,1))
