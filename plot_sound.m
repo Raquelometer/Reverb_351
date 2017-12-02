@@ -1,6 +1,6 @@
 % Function for plotting audio signal vs time
 function[] = plot_sound(y, fs, fig_num, title)
-%test commeng
+% test comment
 dt = 1/fs;
 t = linspace(0, length(y)/fs, length(y));
 
