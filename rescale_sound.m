@@ -1,5 +1,5 @@
 function[y_scaled] = rescale_sound(y, dim)
-
+% test comment
 %y_max_L = max(y(:,1))
 %y_min_L = min(y(:,1))
 
