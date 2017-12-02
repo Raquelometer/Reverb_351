@@ -1,3 +1,4 @@
+% geometrically calculated first order HPF
 [sound, Fs] = audioread('kick.wav');
 
 filtered_sound = sound;
